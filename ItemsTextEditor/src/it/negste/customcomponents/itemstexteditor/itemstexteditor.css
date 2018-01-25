@@ -1,0 +1,63 @@
+.items-text-editor {
+    -fx-skin: "it.gnutti.customcomponents.itemstexteditor.ItemsTextEditorSkin";
+}
+
+.root-items-text-editor-pane {
+    -fx-padding: 2px;
+    -fx-spacing: 4px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.ite-item {
+    -fx-padding: 4px;        
+    -fx-graphic-text-gap: 4px;
+
+    -fx-border-style: solid; 
+    -fx-border-width: 0.5px;
+    -fx-border-radius: 4px; 
+    -fx-border-color: -fx-text-fill;
+    
+    -fx-background-radius: 4px;
+    -fx-background-color: ladder(-fx-background,
+        derive(-fx-background, 50%) 49%,
+        derive(-fx-background, -40%)
+    );    
+    
+}
+
+.ite-item:hover {
+    -fx-background-color: ladder(-fx-background,
+        derive(-fx-background, 80%) 49%,
+        derive(-fx-background, -10%)
+    );    
+}
+
+.ite-x-icon-button {
+/*    -dark-icon-paint: #222222;
+    -light-icon-paint: #EEEEEE;
+    -icon-paint: ladder(-fx-background,
+        -light-icon-paint 49%,
+        -dark-icon-paint
+    );    */
+    -fx-background-color: -fx-text-inner-color;
+    -size: 12;
+    -fx-min-height: -size;
+    -fx-min-width: -size;
+    -fx-max-height: -size;
+    -fx-max-width: -size;
+    -fx-shape: "M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z";
+    -fx-padding: 0px;
+    
+}
+.ite-x-icon-button:hover{
+    -fx-border-width: 0.8px;
+    -fx-border-color: ladder(-fx-background,
+        derive(-icon-paint, 70%) 49%,
+        derive(-icon-paint, -70%)
+    );           
+    -fx-cursor: hand;
+}
+
+.ite-editor {
+    
+}
