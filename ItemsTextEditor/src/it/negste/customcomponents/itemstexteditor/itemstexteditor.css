@@ -1,5 +1,5 @@
 .items-text-editor {
-    -fx-skin: "it.gnutti.customcomponents.itemstexteditor.ItemsTextEditorSkin";
+    -fx-skin: "it.negste.customcomponents.itemstexteditor.ItemsTextEditorSkin";
 }
 
 .root-items-text-editor-pane {
