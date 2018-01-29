@@ -52,8 +52,8 @@
 .ite-x-icon-button:hover{
     -fx-border-width: 0.8px;
     -fx-border-color: ladder(-fx-background,
-        derive(-icon-paint, 70%) 49%,
-        derive(-icon-paint, -70%)
+        derive(-fx-text-inner-color, 70%) 49%,
+        derive(-fx-text-inner-color, -70%)
     );           
     -fx-cursor: hand;
 }
