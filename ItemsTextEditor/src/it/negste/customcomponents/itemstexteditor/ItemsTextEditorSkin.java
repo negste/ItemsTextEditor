@@ -2,6 +2,7 @@ package it.negste.customcomponents.itemstexteditor;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ListChangeListener;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -45,6 +46,12 @@ public class ItemsTextEditorSkin implements Skin<ItemsTextEditor> {
         _control.itemsProperty().forEach(s
                 -> _root.getChildren().add(getItemLabel(s)));
         _editor = getItemEditor(Integer.MAX_VALUE, "");
+        _editor.focusedProperty().addListener((ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) -> {
+            if (!newValue) { //focus lost
+                _control.itemsProperty().add(_root.getChildren().size() - 1, _editor.getText());
+                _editor.clear();
+            }
+        });        
         _root.getChildren().add(_editor);
 
         _itemsChangeListener = (ListChangeListener.Change<? extends String> c) -> {
